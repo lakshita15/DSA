@@ -1,4 +1,4 @@
-package digits;
+//e digits;
 import java.io.*;
 import java.util.*;
 public class Digitsofnumber {

@@ -1,4 +1,4 @@
-package digits;
+//e digits;
 
 import java.util.Scanner;
 

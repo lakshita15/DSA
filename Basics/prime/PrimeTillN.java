@@ -1,4 +1,4 @@
-package prime;
+//e prime;
 
 import java.util.Scanner;
 
