@@ -5,35 +5,35 @@ public class AnyBaseSubtraction {
         
         Scanner scn = new Scanner(System.in);
         int b = scn.nextInt();
-        int n1 = scn.nextInt();
-        int n2 = scn.nextInt();
+        int number1 = scn.nextInt();
+        int number2 = scn.nextInt();
     
-        int d = getDifference(b, n1, n2);
+        int d = getDifference(b, number1, number2);
         System.out.println(d);
      }
     
-     public static int getDifference(int b, int n1, int n2){
+     public static int getDifference(int b, int number1, int number2){
          int res = 0;
   
-          int c = 0;
-          int tp = 1;
-          while(n2 > 0){
-              int d1 = n1 % 10;
-              int d2 = n2 % 10;
+          int carry = 0;
+          int tenkipower = 1;
+          while(number2 > 0){
+              int digt1 = number1 % 10;
+              number1 = number1 / 10;
+              int d2 = number2 % 10;
   
-              n1 = n1 / 10;
-              n2 = n2 / 10;
+              number2 = number2 / 10;
   
-              int d = d2 - c - d1;
+              int d = d2 - carry - digt1;
               if(d < 0){
-                  c = 1;
+                  carry = 1;
                   d = d + b;
               } else {
-                  c = 0;
+                  carry = 0;
               }
   
-              res = res + d * tp;
-              tp = tp * 10;
+              res = res + d * tenkipower;
+              tenkipower = tenkipower * 10;
           }
   
          return res;
