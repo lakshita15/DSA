@@ -1,4 +1,3 @@
-
 import java.io.*;
 import java.util.*;
 
@@ -21,7 +20,6 @@ public class SpanOfArray {
             if(arr[j] < min){
                 min = arr[j];
             }
-            
         }
         int span = max-min;
         System.out.println(span);
