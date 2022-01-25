@@ -1,8 +1,8 @@
+
 import java.util.*;
 import java.io.*;
 
-public class BrokenEconomy {
-  
+public class CeilFloor {
     public static void main(String[] args) {
         Scanner scn = new Scanner (System.in);
         int n = scn.nextInt ();
@@ -13,11 +13,11 @@ public class BrokenEconomy {
         // enter data to be searched
         int data = scn.nextInt ();
         //enter pointers
-      brokeneconomy(arr , data);
+      ceilfloor(arr , data);
 
 
     }
-    public static void brokeneconomy(int arr [] , int data) {
+    public static void ceilfloor(int arr [] , int data) {
         int left = 0;
         int right = arr.length - 1;
         int ceil = -1;
