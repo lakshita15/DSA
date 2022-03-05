@@ -4,6 +4,7 @@ import java.util.*;
 
 public class SpiralDisplay {
 
+    //
     public static void main(String[] args) throws Exception {
         // write your code here
 
@@ -17,7 +18,7 @@ public class SpiralDisplay {
                 arr[i][j] = scn.nextInt();
             }
         }
-
+        //========================USING COUNT===========================//
         int minr = 0;
         int minc = 0;
         int maxr = arr.length - 1;
@@ -54,6 +55,43 @@ public class SpiralDisplay {
             }
             minr++;
         }
-    }
 
+
+        //========================WITHOUT USING COUNT===========================//
+
+        // int minr = 0;
+        // int minc = 0;
+        // int maxr = arr.length - 1;
+        // int maxc = arr[0].length - 1;
+        
+        // while(true){
+        //     // left wall, downwards [what is constant and what varies]
+        //     for(int i = minr; i <= maxr ; i++){
+        //         System.out.println(arr[i][minc]);
+               
+        //     }
+        //     minc++;
+
+        //     // bottom wall, rightwards
+        //     for(int j = minc; j <= maxc ; j++){
+        //         System.out.println(arr[maxr][j]);
+               
+        //     }
+        //     maxr--;
+
+        //     // right wall, upwards
+        //     for(int i = maxr; i >= minr ; i--){
+        //         System.out.println(arr[i][maxc]);
+               
+        //     }
+        //     maxc--;
+
+        //     // top wall, leftwards
+        //     for(int j = maxc; j >= minc ; j--){
+        //         System.out.println(arr[minr][j]);
+               
+        //     }
+        //     minr++;
+        // }
+    }
 }
