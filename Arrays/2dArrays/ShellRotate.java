@@ -13,8 +13,8 @@ public class ShellRotate {
             }
         }
 
-        int s = scn.nextInt();
-        int r = scn.nextInt();
+        int s = scn.nextInt(); //Shell no
+        int r = scn.nextInt(); //kitne se rrotate krna h
 
         int[] oned = getOnedFromShell(twod, s);
         rotate(oned, r);
@@ -110,12 +110,12 @@ public class ShellRotate {
     }
 
     public static void rotate(int[] oned, int r){
-        r = r % oned.length;
+        r = r % oned.length; //r ka mod lia taki range me rhe
         if(r < 0){
-            r += oned.length;
+            r += oned.length; //negative ko handle kia
         }
 
-        reverse(oned, 0, oned.length - r - 1);
+        reverse(oned, 0, oned.length - r - 1); //first half 
         reverse(oned, oned.length - r, oned.length - 1); // second half
         reverse(oned, 0, oned.length - 1); // full
     }
