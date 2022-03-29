@@ -1,7 +1,7 @@
 public class ShellRotate {
     public static void main(String[] args) throws Exception {
         // write your code here
-
+ 
         Scanner scn = new Scanner(System.in);
         int n = scn.nextInt();
         int m = scn.nextInt();
