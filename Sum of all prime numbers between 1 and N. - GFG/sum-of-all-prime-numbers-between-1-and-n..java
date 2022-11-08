@@ -24,46 +24,22 @@ class GFG
 
 
 class Solution{
-public long prime_Sum(int n){
+public long prime_Sum(int high){
 // code here
+long sum =0;
+    for (int n = 1; n <= high; n++) {
+          int count = 0;
+          for (int div = 2; div * div <= n; div++) {
+            if (n % div == 0) {
 
-        long sum=0;
-
-        for(int i=1;i<=n;i++){
-
-            if(isPrime(i)){
-
-                sum+=i;
-
+              count++;
+              break;
             }
-
+          }
+          if (count == 0 && n != 1 && n !=0 ) {
+           sum+=n;
+          }
         }
-
-        return sum;
-
-    }
-
-    
-
-    static boolean isPrime(int n){
-
-        if(n==1||n==0){
-
-            
-
-            return false;
-
-        }
-
-        for(int i=2;i<=Math.sqrt(n);i++){
-
-            if(n%i==0)
-
-            return false;
-
-        }
-
-        return true;
-
+return sum;
     }
 }
