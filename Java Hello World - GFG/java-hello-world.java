@@ -17,6 +17,7 @@ class GFG
 
 class Solution{
     static void printHelloWorld(){
-       System.out.println("Hello World");
+        // code here
+        System.out.println("Hello World");
     }
 }
